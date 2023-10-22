@@ -26,7 +26,7 @@
     "precoverage": "yarn pretest && c8 ava",
     "coverage": "c8 report --reporter=html",
     "postcoverage": "sirv coverage/",
-    "build": "rimraf dist transpile transpile-tests && tsc -p tsconfig.json & wait",
+    "build": "rimraf dist transpile transpile-tests && tsc -p tsconfig.json",
     "postbuild": "rollup -c",
     "release": "np --no-2fa --any-branch",
     "prepublishOnly": "npm-run-all build"
@@ -36,15 +36,15 @@
   },
   "dependencies": {
     "@ampproject/remapping": "0.2.0",
-    "acorn": "7.3.1",
-    "acorn-walk": "7.1.1",
+    "acorn": "^8.10.0",
+    "acorn-walk": "^8.2.0",
     "estree-walker": "2.0.1",
     "google-closure-compiler": "20210808.0.0",
     "magic-string": "0.25.7",
     "uuid": "8.1.0"
   },
   "devDependencies": {
-    "@types/acorn": "4.0.5",
+    "@types/acorn": "^6.0.0",
     "@types/estree": "0.0.44",
     "@types/node": "14.0.13",
     "@types/uuid": "8.0.0",
